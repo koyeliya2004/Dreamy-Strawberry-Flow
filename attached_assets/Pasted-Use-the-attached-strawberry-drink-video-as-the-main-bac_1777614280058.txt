@@ -1,0 +1,83 @@
+Use the attached strawberry drink video as the main background and create a cinematic scroll-based interactive website.
+
+CORE IDEA:
+The website must feel like the user is controlling the drink animation with scroll. The video and layout should feel fully connected (not like a separate video).
+
+VIDEO SETUP:
+
+* Fullscreen background video (autoplay muted initially, then controlled by scroll)
+* Soft pastel pink gradient overlay for readability
+* Use GSAP + ScrollTrigger to sync scroll with video currentTime
+
+SCROLL = VIDEO TIMELINE:
+Scrolling forward moves the video forward, scrolling up reverses it.
+
+VIDEO TIMELINE (BASED ON DRINK SPLASH):
+
+Second 0–2:
+
+* Calm strawberry drink in glass
+* Soft glow lighting
+* Centered hero text fades in: "Strawberry Bliss"
+* Glassmorphism button appears: "Explore"
+
+Second 2–5:
+
+* Strawberry starts falling into the drink
+* Slight zoom-in effect on video
+* Text shifts slightly upward
+* Add subtle floating particles
+
+Second 5–8:
+
+* Splash impact moment (main highlight)
+* Liquid crown and droplets visible
+* Add bold text on left: "Fresh • Sweet • Refreshing"
+* Ensure splash is not covered by text
+
+Second 8–11:
+
+* Liquid overflowing slightly
+* Add floating glass UI cards (ingredients: strawberry, ice, mint)
+* Cards animate in with soft blur and glow
+
+Second 11–14:
+
+* Drink settling down
+* Transition into product showcase section
+* Add cards with hover glow effects
+
+Second 14–18:
+
+* Calm aesthetic returns
+* Background slightly darkens to neon pink/purple tone
+* Add final CTA section:
+
+  * "Experience the Taste"
+  * Button: "Order Now"
+
+ANIMATIONS:
+
+* Smooth parallax scrolling
+* Fade, slide-up, and scale animations
+* Floating UI elements
+* Soft particle effects (like droplets or sparkles)
+
+STYLE:
+
+* Pinterest-style aesthetic
+* Soft pastel pink + neon highlights
+* Glassmorphism UI (blur, transparency, glow)
+* Rounded corners, soft shadows
+
+TECH:
+
+* HTML, CSS, JavaScript
+* GSAP + ScrollTrigger CDN
+* Control video playback using currentTime and scroll progress
+* Smooth scrolling enabled
+* Fully responsive
+
+OUTPUT:
+Provide complete working code in one HTML file.
+Make it ultra aesthetic, cinematic, and modern like high-end animated product websites.
