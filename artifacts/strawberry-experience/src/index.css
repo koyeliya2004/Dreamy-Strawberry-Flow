@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0d0009;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ---- LOADER RING ---- */
+.loader-ring {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 180, 210, 0.15);
+  border-top-color: #ff6b9d;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---- GLASS BUTTON ---- */
+.glass-btn {
+  display: inline-block;
+  padding: 0.85rem 2.5rem;
+  background: rgba(255, 180, 210, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 180, 210, 0.35);
+  border-radius: 100px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 24px rgba(255, 107, 157, 0.15), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.glass-btn:hover {
+  background: rgba(255, 107, 157, 0.25);
+  border-color: rgba(255, 107, 157, 0.6);
+  box-shadow: 0 8px 40px rgba(255, 107, 157, 0.35), inset 0 1px 0 rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* ---- GLASS BUTTON OUTLINE ---- */
+.glass-btn-outline {
+  display: inline-block;
+  padding: 0.85rem 2.5rem;
+  background: transparent;
+  border: 1px solid rgba(255, 180, 210, 0.25);
+  border-radius: 100px;
+  color: rgba(255, 220, 235, 0.75);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.glass-btn-outline:hover {
+  background: rgba(255, 180, 210, 0.08);
+  border-color: rgba(255, 180, 210, 0.5);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ---- SCROLL LINE ---- */
+.scroll-line {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(255, 180, 210, 0.6), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 1; transform: scaleY(1.2); }
+}
+
+/* ---- GRADIENT TEXT ---- */
+.gradient-text {
+  background: linear-gradient(135deg, #ffb3c6 0%, #c44dff 50%, #ff6b9d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- BLOBS ---- */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.blob-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 107, 157, 0.12) 0%, transparent 70%);
+  top: -100px;
+  left: -200px;
+  animation: blobFloat 8s ease-in-out infinite;
+}
+
+.blob-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(196, 77, 255, 0.1) 0%, transparent 70%);
+  bottom: -100px;
+  right: -150px;
+  animation: blobFloat 10s ease-in-out infinite reverse;
+}
+
+@keyframes blobFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -40px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.97); }
+}
+
+/* ---- FLOATING GLASS CARDS ---- */
+.glass-card {
+  will-change: transform, box-shadow;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 1.25rem !important;
+  }
+
+  nav div {
+    gap: 1.25rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  nav div {
+    display: none !important;
+  }
+}
