@@ -11,8 +11,7 @@ function getVideoSrc(): string {
   const w = window.innerWidth;
   const isPortrait = window.innerHeight > window.innerWidth;
   if (w < 768 || (w < 1024 && isPortrait)) return "/mobile.mp4";
-  if (w < 1200) return "/landscape.mp4";
-  return "/hero.mp4";
+  return "/landscape.mp4";
 }
 
 const ingredients = [
