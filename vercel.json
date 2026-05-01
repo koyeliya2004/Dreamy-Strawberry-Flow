@@ -1,5 +1,5 @@
 {
-  "installCommand": "pnpm install",
+  "installCommand": "npm install -g pnpm@latest && pnpm install --no-frozen-lockfile",
   "buildCommand": "pnpm --filter @workspace/strawberry-experience run build:vercel",
   "outputDirectory": "artifacts/strawberry-experience/dist",
   "framework": null,
